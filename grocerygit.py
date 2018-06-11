@@ -32,3 +32,14 @@ print(products [0])
 print ("-----------------------------")
 for p in products:
     print (p["name"])
+print ("-------------------------")
+print ("-------------------------")
+print ("There are " + str (len (products)) + " products:")    # good sample of how to embed function within functon; "cancatanate strings" with '+' sign
+print ("-----------------------")                           # str function changes a variable to string so can cancatanate strings
+
+def sort_by_name (p):               # Understand this
+    return p ["name"]
+products = sorted (products, key = sort_by_name)
+
+for p in products:           #cancatanate strings
+    print ("$*$ " + p["name"])

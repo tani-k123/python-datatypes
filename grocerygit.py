@@ -43,3 +43,22 @@ products = sorted (products, key = sort_by_name)
 
 for p in products:           #cancatanate strings
     print ("$*$ " + p["name"])
+
+print ("---------------------")
+dept = []      #created new empty list called department
+for p in products:
+    dept.append(p["department"])         #appended departments list to empty list
+
+dept = set (dept)                   #change list to set to list so we can take out duplicates
+dept = list (dept)
+
+print ("-----------------------")
+print ("There are " + str (len (dept)) + " departments:")
+print ("-----------------------")
+
+for d in sorted(dept):                                    #creating another for loop that can sort_by_name
+    print ("$*$ " + d.title())                          #.title changes case to title case
+    # print ("$*$ " + d.title() + "(" + "X products" + ")")
+
+def product_belonging_to (dept_name):
+    return [p for p in products if p["department"] == dept_name]

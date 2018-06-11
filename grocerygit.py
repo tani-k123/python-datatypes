@@ -26,3 +26,9 @@ products = [
 print(products)
 
 # TODO: write some Python code here to produce the desired output
+
+print ("-----------------------------")
+print(products [0])
+print ("-----------------------------")
+for p in products:
+    print (p["name"])
